@@ -1,0 +1,26 @@
+<div>
+    @include('components.navigation')
+    @switch($pageroute)
+        @case('dashboard')
+            @livewire('pages.dashboard')
+        @break
+        @case('report')
+            @livewire('pages.report')
+        @break
+        @case('waitinglist')
+            @livewire('pages.waiting-list')
+        @break
+        @case('registration')
+            @livewire('pages.registration')
+        @break
+        @case('onprocess')
+            @livewire('pages.on-process')
+        @break
+        @case('done')
+            @livewire('pages.done')
+        @break
+        @default
+            @livewire('pages.dashboard')
+    @endswitch
+    {{-- <x-wire-loading /> --}}
+</div>
